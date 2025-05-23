@@ -529,6 +529,37 @@ LightProbeGroup:
   - {x: 7.1518564, y: 2.7763042, z: -11.2319765}
   - {x: 8.993203, y: 2.3566551, z: -8.796325}
   m_Dering: 1
+--- !u!1 &943865306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 943865307}
+  m_Layer: 0
+  m_Name: Follow
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &943865307
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943865306}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4809381281401457813}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1028513131
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,13 +918,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b59969cb0b132da4683696fcedac6864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraXform: {fileID: 4809381281401457813}
-  distanceAway: 0
+  cameraXform: {fileID: 943865307}
+  distanceAway: 5
   distanceAwayMultipler: 1.5
-  distanceUp: 0
+  distanceUp: 2
   distanceUpMultiplier: 5
   follow: {fileID: 4809381281411572955}
-  followXform: {fileID: 4809381281401457813}
+  followXform: {fileID: 943865307}
   widescreen: 0.2
   targetingTime: 0.5
   firstPersonLookSpeed: 3
@@ -920,9 +951,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8891d133b6d44045a6e76cf5894e931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shader: {fileID: 0}
+  shader: {fileID: 4800000, guid: d843cea39eb53424b9eb9981ace48fe7, type: 3}
   coverage: 0.1
-  barTexture: {fileID: 0}
+  barTexture: {fileID: 2800000, guid: 12a43dc41561f6a44bed4047aedd1e9f, type: 3}
 --- !u!1 &1582304838
 GameObject:
   m_ObjectHideFlags: 0
@@ -1356,6 +1387,7 @@ Transform:
   m_Children:
   - {fileID: 4809381281401457811}
   - {fileID: 4809381281401457809}
+  - {fileID: 943865307}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4809381281401457817
@@ -2746,7 +2778,7 @@ GameObject:
   - component: {fileID: 4809381281411572956}
   m_Layer: 0
   m_Name: Beta
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3928,7 +3960,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4809381281401884853}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e189725cd50d5e4d9685014e9943197, type: 3}
   m_Name: 
@@ -3937,12 +3969,12 @@ MonoBehaviour:
   onlyInPlayMode: 1
   sceneViewFollowers:
   - enable: 1
-    positionOffset: {x: 0, y: 1.5, z: 0}
+    positionOffset: {x: 0, y: 2.38, z: 0}
     enableFixedRotation: 1
-    fixedRotation: {x: 90, y: 0, z: 0}
+    fixedRotation: {x: 0, y: 90, z: 0}
     targetTransform: {fileID: 4809381281401457813}
     size: 5
-    orthographic: 1
+    orthographic: 0
     sceneViewIndex: 0
 --- !u!114 &4809381281411572955
 MonoBehaviour:
